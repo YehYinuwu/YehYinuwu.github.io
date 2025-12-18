@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YehYin's bio</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('image/background-image.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            cursor: url('image/Normal.ani'), auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .profile-card {
+            width: 90%;
+            max-width: 400px;
+            padding: 2rem;
+            border-radius: 15px;
+            background: rgba(74, 144, 226, 0.2); 
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 15px rgba(80, 205, 227, 0.6);
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 1.8rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        p.bio {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            color: #eee;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .link-btn {
+            display: block;
+            padding: 12px;
+            background: rgba(144, 19, 254, 0.6);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .link-btn:hover {
+            background: rgba(144, 19, 254, 0.9);
+            transform: scale(1.02);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #50e3c2;
+            transform: translateY(-3px);
+        }
+
+         a, button, .link-btn {
+            cursor: url('image/Link.ani'), pointer; 
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <script>
+        var titleText = " - YehYin's Bio - "; 
+        var speed = 150;
+
+        function scrollTitle() {
+            titleText = titleText.substring(1) + titleText.substring(0, 1);
+            document.title = titleText;
+            setTimeout(scrollTitle, speed);
+        }
+        scrollTitle();
+    </script>
+
+    <div class="overlay"></div>
+
+    <div class="profile-card">
+        <img src="image/Profile_Picture.gif" alt="Profile" class="avatar">
+        
+        <h1>YehYin</h1>
+        
+        <p class="bio">NKUST CSIE Student / Valorant Player</p>
+
+        <div class="links">
+            <a href="https://discord.com/users/763752715482169354" target="_blank" class="link-btn">
+                <i class="fab fa-discord"></i> 加入我的 Discord
+            </a>
+            <a href="https://github.com/YehYinuwu" target="_blank" class="link-btn">
+                <i class="fab fa-github"></i> 瀏覽我的 GitHub
+            </a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/yeh_yin_114/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://steamcommunity.com/id/YehYin/" target="_blank"><i class="fab fa-steam"></i></a>
+            <a href="https://www.youtube.com/channel/UCafOtwqwA3metjlWkwKkQhQ" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>
